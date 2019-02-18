@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>14-mapa</title>
+	<link rel="stylesheet" href="vendor/flickity.min.css" media="screen">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class="button-group">
+		<button class="button">reset</button>
+	</div>
+	
+	<div id="page-wrapper">
+		<div class="main-carousel" id="results">
+			
+		</div>
+	</div>
+
+	<script id="template-slide" type="x-tmpl-mustache">
+		
+		<div class="carousel-cell" id="{{carouselNo}}"> 
+			<div class="container" style="background-image: url( {{ image }} );">
+				<h3> {{ title }} </h3>
+				<p> {{ description }} </p>
+			</div>
+		</div>
+	</script>
+		
+		
+	<div class="progress-bar"></div>
+
+	<div class="carouselLinks">
+		<ol>
+			View:&nbsp
+			<li><a href="#carousel-cell1">link 1</a></li>
+			<li><a href="#carousel-cell2">link 2</a></li>
+			<li><a href="#carousel-cell3">link 3</a></li>
+			<li><a href="#carousel-cell4">link 4</a></li>
+			<li><a href="#carousel-cell5">link 5</a></li>
+		</ol>
+	</div>
+	
+	<span class="metadata-marker" style="display: none;" data-region_tag="html-body"></span>
+    
+    <div id="map"></div>
+	<script async defer
+	    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCSetsKSkL1ZeZwDCmsu22uI09spuYluqc&callback=initMap">
+	</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.js"></script>
+	<script src="vendor/flickity-docs.min.js"></script>
+	<script src="https://unpkg.com/flickity-hash@1/hash.js"></script>
+    
+	<script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>
